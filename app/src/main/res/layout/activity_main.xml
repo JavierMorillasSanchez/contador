@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/contador"
+        android:layout_width="405dp"
+        android:layout_height="248dp"
+        android:background="@drawable/borderradius"
+        android:fontFamily="@font/source_code_pro_extralight"
+        android:onClick="copyText"
+        android:paddingStart="15dp"
+        android:paddingTop="30sp"
+        android:paddingEnd="15dp"
+        android:text="000"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="140sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnplus"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="AUMENTAR"
+        android:onClick="aumentar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/botonmas"
+        app:layout_constraintBottom_toBottomOf="@+id/btnminus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toEndOf="@+id/btnminus"
+        app:srcCompat="@drawable/botonmas" />
+
+    <ImageButton
+        android:id="@+id/btnminus"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="DISMINUIR"
+        android:onClick="reducir"
+        android:scaleType="centerCrop"
+        android:src="@drawable/botonmenos"
+        app:layout_constraintBottom_toTopOf="@+id/reinicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contador"
+        app:layout_constraintVertical_bias="0.392"
+        app:srcCompat="@drawable/botonmenos" />
+
+    <Button
+        android:id="@+id/reinicio"
+        android:layout_width="264dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#6C7DEF"
+        android:text="REINICIAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="REINICIAR"
+        android:onClick="reiniciar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
